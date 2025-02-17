@@ -17,6 +17,36 @@ resources:
     resources: 
   - name: Results
     resources: 
+      - name: GITTestScript2_1739780666455.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1739780666455
+          tags: 
+          testId: A1EFED0890025D10CB64B63830323637
+          testName: GITTestScript2
+        dependencies: 
+          - path: /GITProject1/Results/GITTestScript2_1739780666455.xmoebreport
+            type: statsSessionAsset
+          - path: /GITProject1/Results/GITTestScript2_1739780666455_orch!system.mstats
+            type: statsSessionStore
+          - path: /GITProject1/Results/GITTestScript2_1739780666455_orch!system.rstats
+            type: statsSessionStore
+          - path: /GITProject1/Results/GITTestScript2_1739780666455_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /GITProject1/Results/GITTestScript2_1739780666455_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /GITProject1/Results/GITTestScript2_1739780666824.executiondlr
+            type: statsSessionAsset
+          - path: /GITProject1/Tests/GITTestScript2.testsuite
+            type: statsSessionTest
+      - name: GITTestScript2_1739780666455.xmoebreport
+      - name: GITTestScript2_1739780666455_orch!system.mstats
+      - name: GITTestScript2_1739780666455_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: GITTestScript2_1739780666455_perf!localhost.mstats
+      - name: GITTestScript2_1739780666455_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: GITTestScript2_1739780666824.executiondlr
       - name: GitTestscript1_1739776942783.stats
         type: com.ibm.rational.test.lt.stats.session
         properties: 
@@ -47,10 +77,58 @@ resources:
       - name: GitTestscript1_1739776942783_perf!localhost.rstats
         type: com.ibm.rational.test.lt.stats.raw
       - name: GitTestscript1_1739776943851.executiondlr
+      - name: GitTestscript1_1739780557885.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1739780557885
+          tags: 
+          testId: A1EFECFFDA02FFE0D033E63366366233
+          testName: GitTestscript1
+        dependencies: 
+          - path: /GITProject1/Results/GitTestscript1_1739780557885.xmoebreport
+            type: statsSessionAsset
+          - path: /GITProject1/Results/GitTestscript1_1739780557885_orch!system.mstats
+            type: statsSessionStore
+          - path: /GITProject1/Results/GitTestscript1_1739780557885_orch!system.rstats
+            type: statsSessionStore
+          - path: /GITProject1/Results/GitTestscript1_1739780557885_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /GITProject1/Results/GitTestscript1_1739780557885_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /GITProject1/Results/GitTestscript1_1739780559101.executiondlr
+            type: statsSessionAsset
+          - path: /GITProject1/Tests/GitTestscript1.testsuite
+            type: statsSessionTest
+      - name: GitTestscript1_1739780557885.xmoebreport
+      - name: GitTestscript1_1739780557885_orch!system.mstats
+      - name: GitTestscript1_1739780557885_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: GitTestscript1_1739780557885_perf!localhost.mstats
+      - name: GitTestscript1_1739780557885_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: GitTestscript1_1739780559101.executiondlr
   - name: Schedules
     resources: 
   - name: Tests
     resources: 
+      - name: GITTestScript2.recdata
+      - name: GITTestScript2.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /GITProject1/Tests/GITTestScript2.recdata
+            type: recsessionRecdata
+      - name: GITTestScript2.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.4.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EFED0890025D10CB64B63830323637
+        dependencies: 
+          - path: /GITProject1/Tests/GITTestScript2.recsession
+            type: testRecsession
+          - path: /GITProject1/pectran_com_5e8.ma
+            type: test#moeb.applicationPackage
       - name: GitTestscript1.recdata
       - name: GitTestscript1.recsession
         type: com.ibm.rational.test.lt.recsession
@@ -75,5 +153,7 @@ resources:
     resources: 
       - name: test
         resources: 
+          - name: GITTestScript2_Test_A1EFED0890025D10CB64B63830323637.java
+            type: com.ibm.rational.test.lt.generatedCode
           - name: GitTestscript1_Test_A1EFECFFDA02FFE0D033E63366366233.java
             type: com.ibm.rational.test.lt.generatedCode
